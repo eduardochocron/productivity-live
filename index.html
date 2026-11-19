@@ -64,32 +64,24 @@
       function materializeWeeklyTasks(result) {
         if (!Array.isArray(result.recurringTaskOccurrences)) result.recurringTaskOccurrences = [];
         const today = new Date();
-        const end = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const occurrenceDate = localDateKey(today);
         for (const schedule of WEEKLY_TASKS) {
-          const [year, month, day] = schedule.startsOn.split('-').map(Number);
-          const cursor = new Date(year, month - 1, day);
-          while (cursor <= end) {
-            if (cursor.getDay() === schedule.weekday) {
-              const occurrenceDate = localDateKey(cursor);
-              const occurrenceKey = `${schedule.id}:${occurrenceDate}`;
-              if (!result.recurringTaskOccurrences.includes(occurrenceKey)) {
-                result.tasks.push({
-                  id: occurrenceKey,
-                  title: schedule.title,
-                  notes: '',
-                  status: '',
-                  boss: '',
-                  deadline: '',
-                  urgent: true,
-                  today: occurrenceDate === localDateKey(today),
-                  recurringId: schedule.id,
-                  occurrenceDate,
-                });
-                result.recurringTaskOccurrences.push(occurrenceKey);
-              }
-            }
-            cursor.setDate(cursor.getDate() + 1);
-          }
+          if (occurrenceDate < schedule.startsOn || today.getDay() !== schedule.weekday) continue;
+          const occurrenceKey = `${schedule.id}:${occurrenceDate}`;
+          if (result.recurringTaskOccurrences.includes(occurrenceKey)) continue;
+          result.tasks.push({
+            id: occurrenceKey,
+            title: schedule.title,
+            notes: '',
+            status: '',
+            boss: '',
+            deadline: '',
+            urgent: true,
+            today: true,
+            recurringId: schedule.id,
+            occurrenceDate,
+          });
+          result.recurringTaskOccurrences.push(occurrenceKey);
         }
       }
       function loadData() {
