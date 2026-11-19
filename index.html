@@ -33,6 +33,11 @@
       const PEOPLE = ['Alix', 'Jamie', 'Omar', 'Eduardo', 'A&R', 'Marketing'];
       const MEETING_OWNERS = ['Jamie', 'Alix', 'Omar', 'Eduardo'];
       const TABS = [{ id: 'todo', label: 'To Do List' }, ...MEETING_OWNERS.map(name => ({ id: name, label: `${name} Meetings` }))];
+      const WEEKLY_TASKS = [
+        { id: 'send-ar-agenda', title: 'Send A&R Agenda', weekday: 1, startsOn: '2026-11-20' },
+        { id: 'send-ongoing-deadline-email', title: 'Send ongoing deadline email', weekday: 5, startsOn: '2026-11-20' },
+        { id: 'send-omars-weekly-submission', title: "Send Omar's weekly submission", weekday: 5, startsOn: '2026-11-20' },
+      ];
       const STORE_KEY = 'daymark-data-v1';
       const $ = selector => document.querySelector(selector);
       const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -45,9 +50,47 @@
       function defaults() {
         return {
           tasks: [],
+          recurringTaskOccurrences: [],
           meetings: Object.fromEntries(MEETING_OWNERS.map(name => [name, []])),
           options: { todoProgress: [...TODO_PROGRESS], meetingProgress: [...MEETING_PROGRESS], people: [...PEOPLE] },
         };
+      }
+      function localDateKey(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+      }
+      function materializeWeeklyTasks(result) {
+        if (!Array.isArray(result.recurringTaskOccurrences)) result.recurringTaskOccurrences = [];
+        const today = new Date();
+        const end = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        for (const schedule of WEEKLY_TASKS) {
+          const [year, month, day] = schedule.startsOn.split('-').map(Number);
+          const cursor = new Date(year, month - 1, day);
+          while (cursor <= end) {
+            if (cursor.getDay() === schedule.weekday) {
+              const occurrenceDate = localDateKey(cursor);
+              const occurrenceKey = `${schedule.id}:${occurrenceDate}`;
+              if (!result.recurringTaskOccurrences.includes(occurrenceKey)) {
+                result.tasks.push({
+                  id: occurrenceKey,
+                  title: schedule.title,
+                  notes: '',
+                  status: '',
+                  boss: '',
+                  deadline: '',
+                  urgent: true,
+                  today: occurrenceDate === localDateKey(today),
+                  recurringId: schedule.id,
+                  occurrenceDate,
+                });
+                result.recurringTaskOccurrences.push(occurrenceKey);
+              }
+            }
+            cursor.setDate(cursor.getDate() + 1);
+          }
+        }
       }
       function loadData() {
         let stored;
@@ -70,6 +113,7 @@
         result.options.todoProgress = mergeOptions(TODO_PROGRESS, result.options.todoProgress);
         result.options.meetingProgress = mergeOptions(MEETING_PROGRESS, result.options.meetingProgress);
         result.options.people = mergeOptions(PEOPLE, result.options.people);
+        materializeWeeklyTasks(result);
         try { localStorage.setItem(STORE_KEY, JSON.stringify(result)); } catch (error) { /* keep this session usable */ }
         return result;
       }
