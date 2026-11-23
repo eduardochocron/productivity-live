@@ -11,7 +11,8 @@
     *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:14px}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1280px;margin:0 auto;padding:28px 38px 48px}
     header{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{height:36px;width:36px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font:800 17px Manrope;letter-spacing:-2px}.brand-name{font:800 18px Manrope;letter-spacing:-.6px}.brand-caption{font-size:11px;color:var(--muted);margin-top:2px}.header-right{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:12px}.date-chip{border:1px solid var(--line);background:#ffffffa8;padding:9px 12px;border-radius:10px}.avatar{height:32px;width:32px;background:#e8e1d4;color:#6a5a3b;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:11px}.backup-actions{display:flex;gap:6px}.backup-actions button{border:1px solid var(--line);background:#fff;color:#647068;border-radius:7px;padding:7px 9px;font-size:10px;font-weight:600}.backup-actions button:hover{border-color:#afc4b5;background:#f8faf7;color:var(--green)}
     .intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:25px}.eyebrow{text-transform:uppercase;letter-spacing:1.5px;color:var(--green);font-size:10px;font-weight:700;margin-bottom:8px}.intro h1{font:700 31px Manrope;letter-spacing:-1.3px;margin:0}.intro p{color:var(--muted);margin:7px 0 0;font-size:13px}.today-note{border-left:2px solid #c9d8cd;padding:6px 0 6px 13px;color:#667269;font-size:12px;max-width:230px;line-height:1.55}
-    .tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);margin-bottom:24px;overflow:auto}.tab{position:relative;border:0;background:transparent;color:#778078;padding:13px 16px 14px;font-weight:600;font-size:13px;white-space:nowrap}.tab:hover{color:var(--ink)}.tab.active{color:var(--green)}.tab.active:after{content:'';height:2px;background:var(--green);position:absolute;left:14px;right:14px;bottom:-1px;border-radius:2px}.tab .count{font-size:10px;color:#8c958f;margin-left:6px;background:#eeefea;border-radius:20px;padding:2px 6px}.tab.active .count{background:var(--green2);color:var(--green)}
+    .tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);margin-bottom:8px;overflow:auto}
+    .tab-add{color:var(--green);font-weight:700}.tab-creator{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 20px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:10px}.tab-creator[hidden]{display:none}.tab-creator label{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px}.tab-creator input,.tab-creator select,.tab-creator button{border:1px solid var(--line);border-radius:7px;background:#fff;padding:7px 9px;color:var(--ink);font:inherit;font-size:12px}.tab-creator button{color:var(--green);font-weight:700}.tab-rename{width:110px;max-width:18vw;border:1px solid #9ab3a0;border-radius:5px;padding:3px;font:inherit;color:var(--ink)}.tab{position:relative;border:0;background:transparent;color:#778078;padding:13px 16px 14px;font-weight:600;font-size:13px;white-space:nowrap}.tab:hover{color:var(--ink)}.tab.active{color:var(--green)}.tab.active:after{content:'';height:2px;background:var(--green);position:absolute;left:14px;right:14px;bottom:-1px;border-radius:2px}.tab .count{font-size:10px;color:#8c958f;margin-left:6px;background:#eeefea;border-radius:20px;padding:2px 6px}.tab.active .count{background:var(--green2);color:var(--green)}
     .toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px}.section-title{display:flex;align-items:center;gap:10px}.section-title h2{font:700 20px Manrope;letter-spacing:-.5px;margin:0}.section-title p{font-size:12px;color:var(--muted);margin:4px 0 0}.actions{display:flex;gap:9px;align-items:center}.search{position:relative}.search input{width:205px;padding:10px 12px 10px 33px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);outline:none;font-size:12px}.search input:focus,.cell-input:focus,.cell-select:focus{border-color:#92ad9a;box-shadow:0 0 0 3px #345e4b12}.search-icon{position:absolute;left:11px;top:10px;color:#929b94;font-size:14px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:21px}.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;display:flex;justify-content:space-between;align-items:center}.stat-label{color:var(--muted);font-size:11px}.stat-value{font:700 22px Manrope;letter-spacing:-.7px;margin-top:4px}.stat-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:15px}.ic-green{background:var(--green2);color:var(--green)}.ic-amber{background:var(--amber2);color:var(--amber)}.ic-blue{background:var(--blue2);color:var(--blue)}
     .list-card{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--shadow)}.list-head{padding:12px 18px;background:#fbfbf9;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(220px,1.65fr) 130px 135px 122px 90px 34px;gap:10px;color:#8b948d;text-transform:uppercase;letter-spacing:1px;font-size:9px;font-weight:700}.task-row{position:relative;display:grid;grid-template-columns:minmax(220px,1.65fr) 130px 135px 122px 90px 34px;gap:10px;align-items:center;padding:10px 18px;border-bottom:1px solid #f0f0ec;min-height:57px;transition:background .15s}.task-row:last-child{border-bottom:0}.task-row.urgent-row{background:#ffe4df;box-shadow:inset 4px 0 0 var(--red)}.task-row.followup-row{background:#fff4c7;box-shadow:inset 4px 0 0 #d2a51e}.task-row.meeting-row.urgent-row{background:#ffe4df;box-shadow:inset 4px 0 0 var(--red)}.drag-handle{position:absolute;left:0;top:0;bottom:0;width:16px;z-index:2;cursor:grab;touch-action:none;display:grid;place-items:center;color:#9ba69e;opacity:.42}.drag-handle:before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#dfe4df}.drag-handle:after{content:'⋮';font-size:17px;line-height:1;position:relative}.drag-handle:hover{opacity:1;color:var(--green);cursor:grab}.drag-handle:hover:before{background:var(--green)}.drag-handle:active{cursor:grabbing}.task-row.dragging{opacity:.42}.task-row.drag-target{outline:2px dashed #82978a;outline-offset:-3px}.today-section{margin:12px 12px 16px;border:1px solid #eadfc7;border-radius:10px;background:#fffbf4;overflow:hidden}.today-section .task-row{background:#fffbf4}.today-section .task-row.urgent-row{background:#ffe4df}.today-section .section-label{padding:12px 14px;color:var(--amber);background:#fbf2e1;border-bottom:1px solid #eadfc7}.task-main{display:flex;gap:8px;align-items:center;min-width:0}.task-title-input{min-width:40px;flex:1;display:grid;grid-template-columns:1fr}.cell-input,.cell-select{width:100%;min-width:0;padding:8px 9px;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--ink);outline:none;font-size:12px}.cell-input::placeholder{color:#a6ada8}.cell-input:hover,.cell-select:hover{border-color:#e8ebe5;background:#fff}.task-title-input .cell-input{font-weight:600}.task-title-input .cell-input.completed{text-decoration:line-through;color:#9aa19c}.task-notes{color:#737f76;font-size:11px;padding-top:3px;padding-bottom:3px}.cell-select{appearance:none;padding-right:22px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='m2 3.5 3 3 3-3' fill='none' stroke='%237e8781' stroke-width='1.3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 7px center}.cell-select option{color:var(--ink);background:#fff}.task-title-input .cell-input:focus{background:#fff}.flag-button{flex:none;border:0;background:transparent;color:#b7beb8;border-radius:6px;width:27px;height:30px;font-size:17px;line-height:1}.flag-button:hover{background:#f7e4df;color:var(--red)}.flag-button.on{color:#fff;background:var(--red)}.followup-button{border:1px solid transparent;border-radius:6px;background:transparent;color:#8b7532;padding:6px 8px;font-size:9px;font-weight:700;letter-spacing:.35px;white-space:nowrap}.followup-button:hover,.followup-button.on{background:#f5df85;color:#5f4a0b}.meeting-title{min-width:0}.meeting-title-line{display:flex;gap:4px;align-items:center}.meeting-title-line .cell-input{flex:1;font-weight:600}.meeting-notes{color:#737f76;font-size:11px;padding-top:3px;padding-bottom:3px}.cell-select option{color:var(--ink);background:#fff}.check{appearance:none;flex:none;width:15px;height:15px;border:1.5px solid #ccd3cd;border-radius:5px;cursor:pointer;position:relative;margin:0 1px}.check:checked{background:var(--green);border-color:var(--green)}.check:checked:after{content:'✓';position:absolute;color:#fff;font-size:10px;left:2px;top:-1px}.today-toggle{display:flex;align-items:center;justify-content:center;gap:5px;color:#818b83;font-size:10px;white-space:nowrap;cursor:pointer}.today-toggle input{accent-color:var(--amber);margin:0}.date-input{font-size:11px;padding:7px 5px}.row-delete{border:0;background:transparent;color:#aab1ab;font-size:16px;border-radius:5px;width:28px;height:28px;opacity:.55}.task-row:hover .row-delete{opacity:1}.row-delete:hover{background:#fbece9;color:var(--red)}.section-label{padding:14px 18px 8px;display:flex;align-items:center;gap:8px;color:#69766c;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.1px;background:#fff}.section-label:after{content:'';height:1px;background:var(--line);flex:1}.today-section .section-label:after{background:#eadfc7}.add-row{display:flex;align-items:center;gap:7px;border:0;background:#fff;color:#7c887e;width:100%;padding:13px 18px;text-align:left;font-size:12px;font-weight:600}.add-row:hover{background:#fafbf8;color:var(--green)}.add-plus{font-size:17px;color:var(--green);font-weight:400}.meeting-head{grid-template-columns:minmax(240px,1.5fr) minmax(180px,1fr) 34px}.meeting-row{grid-template-columns:minmax(240px,1.5fr) minmax(180px,1fr) 34px}.meeting-summary{display:flex;gap:8px;margin:14px 0 18px;flex-wrap:wrap}.meeting-summary .mini{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:11px;color:var(--muted)}.mini b{color:var(--ink);margin-right:4px}.empty{padding:35px 20px;text-align:center;color:var(--muted);font-size:12px}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;transition:.2s;background:#25392d;color:#fff;padding:10px 15px;border-radius:9px;font-size:12px;z-index:12;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
     @media(max-width:900px){.app{padding:22px 20px}.list-head{display:none}.task-row{grid-template-columns:minmax(0,1fr) 28px;gap:5px 8px;padding:10px 13px;position:relative}.task-main{grid-column:1;grid-row:1}.task-row .boss-cell,.task-row .status-cell,.task-row .deadline-cell,.task-row .today-cell,.task-row .meeting-notes-cell{grid-row:2}.task-row .boss-cell{grid-column:1}.task-row .status-cell{grid-column:1;margin-left:2px}.task-row .deadline-cell{grid-column:1}.task-row .today-cell{grid-column:1;justify-content:flex-start;margin-left:5px}.task-row .row-delete{grid-column:2;grid-row:1}.task-row.meeting-row{grid-template-columns:minmax(0,1fr) 28px}.meeting-row .meeting-title{grid-column:1;grid-row:1}.meeting-row .meeting-status-cell{grid-column:1;grid-row:2}.meeting-row .meeting-notes-cell{grid-column:1;grid-row:3}.meeting-row .row-delete{grid-column:2;grid-row:1}.list-card{overflow:visible}.task-row .cell-select,.task-row .date-input{max-width:210px}.today-note{display:none}}
@@ -24,7 +25,13 @@
   <div class="app">
     <header><div class="brand"><div class="brand-mark">P</div><div><div class="brand-name">PRODUCTIVITY</div><div class="brand-caption">Your work, in good order</div></div></div><div class="header-right"><span class="date-chip" id="todayDate"></span><div class="backup-actions"><button id="exportData" type="button">Export data</button><button id="importData" type="button">Import data</button><input id="importFile" type="file" accept="application/json,.json" hidden></div><div class="avatar">EC</div></div></header>
     <section class="intro"><div><div class="eyebrow">A little more clarity</div><h1 id="greeting">Good morning.</h1><p>Keep the important things moving.</p></div><div class="today-note">One thing at a time. Your work is all here when you need it.</div></section>
-    <nav class="tabs" id="tabs" aria-label="Workspace tabs"></nav><main id="content"></main>
+    <nav class="tabs" id="tabs" aria-label="Workspace tabs"></nav>
+    <div class="tab-creator" id="tabCreator" hidden>
+      <label>Tab type<select id="newTabType"><option value="list">To-Do List</option><option value="meeting">Meetings</option></select></label>
+      <input id="newTabName" type="text" maxlength="40" placeholder="Name this tab">
+      <button id="createTab" type="button">Add tab</button><button id="cancelTab" type="button">Cancel</button>
+    </div>
+    <main id="content"></main>
   </div><div class="toast" id="toast" role="status"></div>
   <script>
     (() => {
@@ -32,7 +39,7 @@
       const MEETING_PROGRESS = ['On Me', 'Waiting', 'Times Sent', 'Sent', 'Done'];
       const PEOPLE = ['Alix', 'Jamie', 'Omar', 'Eduardo', 'A&R', 'Marketing'];
       const MEETING_OWNERS = ['Jamie', 'Alix', 'Omar', 'Eduardo'];
-      const TABS = [{ id: 'todo', label: 'To Do List' }, ...MEETING_OWNERS.map(name => ({ id: name, label: `${name} Meetings` }))];
+      const TABS = [{ id: 'todo', label: 'To Do List', type: 'list' }, ...MEETING_OWNERS.map(name => ({ id: name, label: `${name} Meetings`, type: 'meeting' }))];
       const WEEKLY_TASKS = [
         { id: 'send-ar-agenda', title: 'Send A&R Agenda', weekday: 1, startsOn: '2026-11-20' },
         { id: 'send-ongoing-deadline-email', title: 'Send ongoing deadline email', weekday: 5, startsOn: '2026-11-20' },
@@ -52,6 +59,9 @@
           tasks: [],
           recurringTaskOccurrences: [],
           meetings: Object.fromEntries(MEETING_OWNERS.map(name => [name, []])),
+          customTabs: [],
+          customLists: {},
+          customMeetings: {},
           options: { todoProgress: [...TODO_PROGRESS], meetingProgress: [...MEETING_PROGRESS], people: [...PEOPLE] },
         };
       }
@@ -105,6 +115,13 @@
         result.options.todoProgress = mergeOptions(TODO_PROGRESS, result.options.todoProgress);
         result.options.meetingProgress = mergeOptions(MEETING_PROGRESS, result.options.meetingProgress);
         result.options.people = mergeOptions(PEOPLE, result.options.people);
+        result.customTabs = Array.isArray(result.customTabs) ? result.customTabs : [];
+        result.customLists = result.customLists && typeof result.customLists === 'object' ? result.customLists : {};
+        result.customMeetings = result.customMeetings && typeof result.customMeetings === 'object' ? result.customMeetings : {};
+        result.customTabs.forEach(tab => {
+          if (tab.type === 'list' && !Array.isArray(result.customLists[tab.id])) result.customLists[tab.id] = [];
+          if (tab.type === 'meeting' && !Array.isArray(result.customMeetings[tab.id])) result.customMeetings[tab.id] = [];
+        });
         materializeWeeklyTasks(result);
         try { localStorage.setItem(STORE_KEY, JSON.stringify(result)); } catch (error) { /* keep this session usable */ }
         return result;
@@ -118,14 +135,53 @@
       function newId() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
       function niceDay() { return new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date()); }
       function counts() {
+        const countOpen = items => items.filter(item => item.status !== 'Done').length;
         return {
-          todo: data.tasks.filter(task => task.status !== 'Done').length,
-          ...Object.fromEntries(MEETING_OWNERS.map(name => [name, data.meetings[name].filter(meeting => meeting.status !== 'Done').length]))
+          todo: countOpen(data.tasks),
+          ...Object.fromEntries(MEETING_OWNERS.map(name => [name, countOpen(data.meetings[name])])),
+          ...Object.fromEntries(data.customTabs.map(tab => [tab.id, countOpen(tab.type === 'list' ? data.customLists[tab.id] : data.customMeetings[tab.id])]))
         };
+      }
+      function allTabs() { return [...TABS, ...data.customTabs]; }
+      function tabInfo(id) { return allTabs().find(tab => tab.id === id); }
+      function tasksFor(id = active) { return id === 'todo' ? data.tasks : (data.customLists[id] || []); }
+      function meetingsFor(id = active) {
+        if (data.meetings[id]) return data.meetings[id];
+        if (!Array.isArray(data.customMeetings[id])) data.customMeetings[id] = [];
+        return data.customMeetings[id];
       }
       function renderTabs() {
         const currentCounts = counts();
-        $('#tabs').innerHTML = TABS.map(tab => `<button class="tab ${active === tab.id ? 'active' : ''}" data-tab="${tab.id}">${tab.label}<span class="count">${currentCounts[tab.id] ?? 0}</span></button>`).join('');
+        $('#tabs').innerHTML = allTabs().map(tab => {
+          const custom = data.customTabs.some(item => item.id === tab.id);
+          return `<button class="tab ${active === tab.id ? 'active' : ''}" data-tab="${esc(tab.id)}" ${custom ? 'data-custom-tab="true"' : ''}>${esc(tab.label)}<span class="count">${currentCounts[tab.id] ?? 0}</span></button>`;
+        }).join('') + '<button class="tab tab-add" id="addTab" type="button">＋ Add tab</button>';
+      }
+      function beginTabRename(button, tab) {
+        const input = document.createElement('input');
+        input.className = 'tab-rename';
+        input.value = tab.label;
+        input.setAttribute('aria-label', 'Rename tab');
+        button.replaceChildren(input);
+        input.focus();
+        input.select();
+        let finished = false;
+        const finish = save => {
+          if (finished) return;
+          finished = true;
+          const label = input.value.trim();
+          if (save && label) {
+            const storedTab = data.customTabs.find(item => item.id === tab.id);
+            if (storedTab) storedTab.label = label;
+            persist();
+          }
+          render();
+        };
+        input.onkeydown = event => {
+          if (event.key === 'Enter') { event.preventDefault(); finish(true); }
+          if (event.key === 'Escape') { event.preventDefault(); finish(false); }
+        };
+        input.onblur = () => finish(true);
       }
       function tone(status) {
         const known = ['Started', 'In Progress', 'Done', 'On Me', 'Waiting', 'Times Sent', 'Sent'];
@@ -155,30 +211,38 @@
         </div>`;
       }
       function matches(item) { return `${item.title || ''} ${item.notes || ''} ${item.boss || ''} ${item.status || ''} ${item.address || ''}`.toLowerCase().includes(query.toLowerCase()); }
-      function todoView() {
-        const all = data.tasks;
-        const today = all.filter(task => task.today && matches(task));
-        const other = all.filter(task => !task.today && matches(task));
+      function prioritizedTasks(items) {
+        return items.map((item, index) => ({ item, index }))
+          .sort((a, b) => Number(Boolean(b.item.urgent)) - Number(Boolean(a.item.urgent)) || a.index - b.index)
+          .map(entry => entry.item);
+      }
+      function todoView(tasks, title) {
+        const all = tasks;
+        const today = prioritizedTasks(all.filter(task => task.today && matches(task)));
+        const other = prioritizedTasks(all.filter(task => !task.today && matches(task)));
         const open = all.filter(task => task.status !== 'Done').length;
         const urgent = all.filter(task => task.urgent && task.status !== 'Done').length;
         const done = all.filter(task => task.status === 'Done').length;
-        return `<div class="toolbar"><div class="section-title"><div><h2>To Do List</h2><p>Type right into a row. Click + whenever you need another.</p></div></div><div class="actions"><div class="search"><span class="search-icon">⌕</span><input id="searchInput" placeholder="Find an activity…" value="${esc(query)}"></div></div></div>
+        return `<div class="toolbar"><div class="section-title"><div><h2>${esc(title)}</h2><p>Type right into a row. Click + whenever you need another.</p></div></div><div class="actions"><div class="search"><span class="search-icon">⌕</span><input id="searchInput" placeholder="Find an activity…" value="${esc(query)}"></div></div></div>
           <div class="summary"><div class="stat"><div><div class="stat-label">Still to do</div><div class="stat-value">${open}</div></div><span class="stat-icon ic-green">☷</span></div><div class="stat"><div><div class="stat-label">Urgent</div><div class="stat-value">${urgent}</div></div><span class="stat-icon ic-amber">⚑</span></div><div class="stat"><div><div class="stat-label">Completed</div><div class="stat-value">${done}</div></div><span class="stat-icon ic-blue">✓</span></div></div>
           <div class="list-card"><div class="list-head"><span>Activity</span><span>For Whom</span><span>Progress</span><span>Deadline</span><span>Today</span><span></span></div>${today.length ? `<div class="today-section"><div class="section-label">Today <span>${today.length}</span></div>${today.map(taskRow).join('')}</div>` : ''}${other.map(taskRow).join('')}${!today.length && !other.length ? `<div class="empty">${query ? 'No matching rows.' : 'Nothing on the list yet. Click + to add a row.'}</div>` : ''}<button class="add-row" type="button" data-add="task"><span class="add-plus">＋</span>Add a row</button></div>`;
       }
       function meetingView() {
-        const items = data.meetings[active];
+        const items = meetingsFor(active);
         const filtered = items.filter(matches).map((meeting, index) => ({ meeting, index })).sort((a, b) => priority(a.meeting) - priority(b.meeting) || a.index - b.index).map(entry => entry.meeting);
         const done = items.filter(item => item.status === 'Done').length;
         const waiting = items.filter(item => item.status === 'Waiting').length;
         const onMe = items.filter(item => item.status === 'On Me').length;
-        return `<div class="toolbar"><div class="section-title"><div><h2>${active} Meetings</h2><p>Type directly into a row. Use + to add another.</p></div></div><div class="actions"><div class="search"><span class="search-icon">⌕</span><input id="searchInput" placeholder="Find a meeting…" value="${esc(query)}"></div></div></div>
+        return `<div class="toolbar"><div class="section-title"><div><h2>${esc(tabInfo(active)?.label || active)}</h2><p>Type directly into a row. Use + to add another.</p></div></div><div class="actions"><div class="search"><span class="search-icon">⌕</span><input id="searchInput" placeholder="Find a meeting…" value="${esc(query)}"></div></div></div>
           <div class="meeting-summary"><div class="mini"><b>${items.length}</b> total</div><div class="mini"><b>${onMe}</b> on me</div><div class="mini"><b>${waiting}</b> waiting</div><div class="mini"><b>${done}</b> done</div></div>
           <div class="list-card"><div class="list-head meeting-head"><span>Meeting &amp; notes</span><span>Meeting type</span><span>Progress</span><span></span></div>${filtered.map(meetingRow).join('')}${!filtered.length ? `<div class="empty">${query ? 'No matching rows.' : 'Nothing here yet. Click + to add a row.'}</div>` : ''}<button class="add-row" type="button" data-add="meeting"><span class="add-plus">＋</span>Add a row</button></div>`;
       }
       function render(focusId = null) {
         renderTabs();
-        $('#content').innerHTML = active === 'todo' ? todoView() : meetingView();
+        const currentTab = tabInfo(active);
+        $('#content').innerHTML = currentTab?.type === 'list'
+          ? todoView(tasksFor(active), currentTab.label)
+          : meetingView();
         wire();
         if (focusId) {
           const input = document.querySelector(`[data-id="${CSS.escape(focusId)}"] [data-field="title"]`);
@@ -186,7 +250,36 @@
         }
       }
       function wire() {
-        document.querySelectorAll('[data-tab]').forEach(button => button.onclick = () => { active = button.dataset.tab; query = ''; render(); });
+        document.querySelectorAll('[data-tab]').forEach(button => {
+          button.onclick = () => { active = button.dataset.tab; query = ''; render(); };
+          if (button.dataset.customTab === 'true') {
+            button.oncontextmenu = event => {
+              event.preventDefault();
+              const tab = data.customTabs.find(item => item.id === button.dataset.tab);
+              if (tab) beginTabRename(button, tab);
+            };
+          }
+        });
+        $('#addTab').onclick = () => {
+          const creator = $('#tabCreator');
+          creator.hidden = !creator.hidden;
+          if (!creator.hidden) $('#newTabName').focus();
+        };
+        $('#cancelTab').onclick = () => { $('#tabCreator').hidden = true; };
+        $('#createTab').onclick = () => {
+          const type = $('#newTabType').value;
+          const label = $('#newTabName').value.trim() || (type === 'list' ? 'New To-Do List' : 'New Meetings');
+          const id = `${type}-${newId()}`;
+          data.customTabs.push({ id, type, label });
+          if (type === 'list') data.customLists[id] = [];
+          else data.customMeetings[id] = [];
+          active = id;
+          query = '';
+          $('#newTabName').value = '';
+          $('#tabCreator').hidden = true;
+          persist();
+          render();
+        };
         const search = $('#searchInput');
         search.oninput = () => { const position = search.selectionStart; query = search.value; render(); const next = $('#searchInput'); next.focus(); next.setSelectionRange(position, position); };
         $('#content').querySelectorAll('[data-add]').forEach(button => button.onclick = () => {
@@ -194,16 +287,25 @@
           const item = isTask
             ? { id: newId(), title: '', notes: '', status: '', boss: '', deadline: '', urgent: false, today: false }
             : { id: newId(), title: '', notes: '', status: '', urgent: false, followUp: false, mode: '', address: '' };
-          if (isTask) data.tasks.push(item); else data.meetings[active].push(item);
+          if (isTask) tasksFor(active).push(item); else meetingsFor(active).push(item);
           persist(); render(item.id);
         });
         $('#content').querySelectorAll('.task-row').forEach(row => {
-          const item = row.dataset.kind === 'task' ? data.tasks.find(task => task.id === row.dataset.id) : data.meetings[active].find(meeting => meeting.id === row.dataset.id);
+          const item = row.dataset.kind === 'task' ? tasksFor(active).find(task => task.id === row.dataset.id) : meetingsFor(active).find(meeting => meeting.id === row.dataset.id);
           if (!item) return;
           row.querySelectorAll('[data-field]').forEach(element => {
             const field = element.dataset.field;
             if (field === 'delete') {
-              element.onclick = () => { if (row.dataset.kind === 'task') data.tasks = data.tasks.filter(task => task.id !== item.id); else data.meetings[active] = data.meetings[active].filter(meeting => meeting.id !== item.id); persist(); render(); };
+              element.onclick = () => {
+                if (row.dataset.kind === 'task') {
+                  const list = tasksFor(active).filter(task => task.id !== item.id);
+                  if (active === 'todo') data.tasks = list; else data.customLists[active] = list;
+                } else {
+                  const list = meetingsFor(active).filter(meeting => meeting.id !== item.id);
+                  if (data.meetings[active]) data.meetings[active] = list; else data.customMeetings[active] = list;
+                }
+                persist(); render();
+              };
               return;
             }
             if (field === 'urgent' || field === 'followUp') {
@@ -241,7 +343,7 @@
           row.ondrop = event => {
             if (!dragMeta || dragMeta.kind !== row.dataset.kind || dragMeta.id === row.dataset.id || (dragMeta.kind === 'meeting' && dragMeta.owner !== active)) return;
             event.preventDefault();
-            const list = dragMeta.kind === 'task' ? data.tasks : data.meetings[active];
+            const list = dragMeta.kind === 'task' ? tasksFor(active) : meetingsFor(active);
             const sourceIndex = list.findIndex(item => item.id === dragMeta.id);
             const target = list.find(item => item.id === row.dataset.id);
             if (sourceIndex < 0 || !target) return;
@@ -277,7 +379,7 @@
           if (!existing) list.push(option);
           const field = scope === 'people' ? 'boss' : 'status';
           const row = button.closest('.task-row');
-          const item = row.dataset.kind === 'task' ? data.tasks.find(task => task.id === row.dataset.id) : data.meetings[active].find(meeting => meeting.id === row.dataset.id);
+          const item = row.dataset.kind === 'task' ? tasksFor(active).find(task => task.id === row.dataset.id) : meetingsFor(active).find(meeting => meeting.id === row.dataset.id);
           item[field] = option;
           persist(); render();
         };
