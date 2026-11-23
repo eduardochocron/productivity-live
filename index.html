@@ -162,6 +162,7 @@
         input.className = 'tab-rename';
         input.value = tab.label;
         input.setAttribute('aria-label', 'Rename tab');
+        input.onclick = event => event.stopPropagation();
         button.replaceChildren(input);
         input.focus();
         input.select();
